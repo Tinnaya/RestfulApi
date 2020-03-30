@@ -1,0 +1,68 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width; initial-scale=1" />
+	<link rel="stylesheet" href="css/all.css" type="text/css"/>
+	<link rel="stylesheet" href="css/fonts.css" type="text/css"/>
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+	<title>Restful API</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="page-header">
+			<h1>Students API</h1>
+		</div>
+		<div class="row">
+			<div class="col-xs-4">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						Students list
+					</div>
+			
+					<div class="panel-body">
+						<div class="list-group" id="students-list"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="panel panel-warning">
+					<div class="panel-heading">Student info</div>
+					<div class="panel-body">
+						<form id="update-student">
+							<input type="hidden" name="id">
+							<div class="form-group">
+								<input type="text" name="firstname" class="form-control" placeholder="firstname">
+							</div>
+							<div class="form-group">
+								<input type="text" name="lastname" class="form-control" placeholder="lastname">
+							</div>
+							<div class="form-group">
+								<input type="email" name="email" class="form-control" placeholder="email">
+							</div>
+							<div class="form-group">
+								<input type="text" name="group_id" class="form-control" placeholder="Group ID" readonly>
+							</div>
+							<div class="form-group">
+								<input type="text" name="git" class="form-control" placeholder="git">
+							</div>
+							<div class="form-group">
+								<textarea  name="info" class="form-control" placeholder="info"></textarea>
+							</div>
+							<button class="btn btn-warning">Update</button>
+							<button class="btn btn-danger" type="button" id="delete-student">Delete</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4"></div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script type="module" src="./index.js"></script>
+</body>
+</html>
